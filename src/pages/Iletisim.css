@@ -1,0 +1,363 @@
+/* ==========================================================================
+   İLETİŞİM SAYFASI — Brutalist Siyah & Sarı Tema + Glassmorphism
+   ========================================================================== */
+
+.iletisim-wrapper {
+  background-color: #000000;
+  color: #F5F5F7;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ambient */
+.iletisim-ambient {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.iletisim-glow-red {
+  position: absolute;
+  top: 40%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255, 179, 0, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.iletisim-grid-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 179, 0, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 179, 0, 0.015) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* DIAGONAL PHONE BEHIND CONTACT INFO */
+.iletisim-phone-diagonal {
+  position: absolute;
+  top: 40%;
+  right: 2%;
+  transform: translateY(-50%) rotate(-15deg);
+  width: 550px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.iletisim-phone-diagonal svg {
+  width: 100%;
+  height: auto;
+}
+
+/* HERO */
+.iletisim-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 10;
+  padding: 0 8% 80px;
+}
+
+.iletisim-hero-content {
+  max-width: 600px;
+}
+
+.iletisim-label {
+  color: #FFB300;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.iletisim-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 1.05;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+}
+
+.iletisim-gradient-text {
+  color: #FFB300;
+  text-shadow: 0 0 30px rgba(255, 179, 0, 0.4);
+}
+
+.iletisim-subtitle {
+  font-size: 1.15rem;
+  color: #86868B;
+  line-height: 1.8;
+}
+
+/* FORM & CONTACT GRID */
+.iletisim-content {
+  position: relative;
+  z-index: 10;
+  padding: 0 8% 120px;
+}
+
+.iletisim-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* GLASSMORPHISM FORM CARD */
+.iletisim-form-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 28px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iletisim-form-card::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 179, 0, 0.15), transparent 50%, rgba(255, 179, 0, 0.05));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.iletisim-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* FORM GROUPS */
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  font-size: 1rem;
+  color: #555;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  font-weight: 500;
+}
+
+.form-group.active label {
+  top: -18px;
+  font-size: 0.75rem;
+  color: #FFB300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #F5F5F7;
+  font-size: 1.05rem;
+  padding: 14px 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: rgba(255, 179, 0, 0.4);
+}
+
+.form-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--line-color, #FFB300);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-group.active .form-line {
+  width: 100%;
+}
+
+/* Submit Button */
+.iletisim-submit-btn {
+  background: #FFB300;
+  color: #ffffff;
+  padding: 18px 50px;
+  border: 2px solid #FFB300;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 4px 4px 0px #fff;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.iletisim-submit-btn:hover {
+  background: #000;
+  color: #FFB300;
+  border-color: #FFB300;
+  box-shadow: -4px -4px 0px #FFB300;
+}
+
+/* Success Message */
+.iletisim-success {
+  text-align: center;
+  padding: 40px;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #FFB300;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #FFB300;
+  margin: 0 auto 20px;
+}
+
+.iletisim-success h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.iletisim-success p {
+  color: #86868B;
+  font-size: 1rem;
+}
+
+/* CONTACT INFO SIDE */
+.iletisim-info {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding-top: 20px;
+}
+
+.info-block {}
+
+.info-title {
+  font-size: 0.8rem;
+  color: #FFB300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #A1A1A6;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.info-icon {
+  color: #FFB300;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-link-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #A1A1A6;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+
+.social-link-item:hover {
+  background: rgba(255, 179, 0, 0.08);
+  border-color: rgba(255, 179, 0, 0.3);
+  color: #FFB300;
+  transform: translateX(8px);
+}
+
+/* Hours */
+.info-hours {
+  color: #A1A1A6;
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+}
+
+.info-hours-detail {
+  color: #F5F5F7;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 968px) {
+  .iletisim-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .iletisim-hero {
+    min-height: 60vh;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .iletisim-title {
+    font-size: 3rem;
+  }
+  .iletisim-form-card {
+    padding: 30px 25px;
+  }
+  .iletisim-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

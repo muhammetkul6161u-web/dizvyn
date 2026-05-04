@@ -1,0 +1,354 @@
+/* ==========================================================================
+   AKDİJİTAL - HAKKIMIZDA SAYFASI (PREMIUM EDITORIAL TASARIM)
+   ========================================================================== */
+
+/* 1. WARM WOOD TEXTURE BACKGROUND */
+.hakkimizda-wrapper {
+  background-color: #1a120b;
+  background-image: 
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px
+    ),
+    radial-gradient(circle at 50% 30%, #3e2723 0%, #1a120b 70%);
+  color: #F9F6F0; 
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  padding-top: 110px;
+  padding-bottom: 0px;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* FLOATING COFFEE SYMBOLS */
+.coffee-symbols-layer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+.floating-coffee, .floating-bean {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.08);
+  filter: blur(0.5px);
+}
+/* --- 3. DİNAMİK VE ÇOK SAYIDA İKON --- */
+.floating-icon {
+  position: absolute;
+  color: #2C241B !important;
+  stroke-width: 1.5px;
+  opacity: 0.15;
+  z-index: 5; /* Yazıların arasından geçmeleri için orta katman */
+  pointer-events: none;
+}
+
+
+
+
+/* --- 2. YENİ ASİMETRİK HERO (KARŞILAMA) ALANI --- */
+.new-hero-section {
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.hero-photo-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-box {
+  width: 100%; 
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image-box img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fotoğrafın İçindeki Yazılar Okunsun Diye Karartma Degradesi */
+.hero-img-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 15, 10, 0.9) 0%, rgba(20, 15, 10, 0) 70%);
+}
+
+/* Fotoğrafın İÇİNE Gömülü Başlık */
+.hero-title-inside {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #F9F6F0; /* Fotoğraf içinde net okunması için açık renk */
+  z-index: 2;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.hero-title-inside span {
+  color: #C18C5D; /* Kiremit vurgu */
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+/* Metin kutusu - Fotoğrafın sağ köşesine birleşik, birazı fotoğrafın içine kaçıyor */
+.hero-desc-box {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  width: 45%;
+  max-width: 500px;
+  background: rgba(26, 18, 11, 0.4); 
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 192, 168, 0.1);
+  border-radius: 1.2rem;
+  padding: 30px 35px;
+  z-index: 15;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.hero-desc-box p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+
+/* --- 3. ORTALANMIŞ, DİKDÖRTGEN HİKAYE KARTLARI --- */
+.story-section {
+  margin-top: 150px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.section-centered-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #f2e8da, #c19b77);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 3rem;
+}
+
+.story-card-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 450px;
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(44, 36, 27, 0.15);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.story-bg-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: background 0.5s ease;
+}
+
+.story-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+  color: #ffffff;
+}
+
+
+/* --- 4. YATAY DİKDÖRTGEN MANİFESTO KARTLARI --- */
+.manifesto-section {
+  margin-top: 150px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.manifesto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Kare değil, tam istediğin gibi Dikdörtgen yapılı kartlar */
+.manifesto-rect-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 2.5rem;
+  padding: 35px 40px;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(193, 140, 93, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+/* Manifesto başlıkları: ten renginden kahveye geçişli */
+.manifesto-rect-card h3 {
+  background: linear-gradient(135deg, #ffffff 30%, #f2e8da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Manifesto paragrafları: saf beyaz */
+.manifesto-rect-card p {
+  color: #ffffff !important;
+}
+
+/* Kutuların Üstüne Gelince (Hover) Efekti */
+.manifesto-rect-card:hover {
+  background: rgba(193, 140, 93, 0.1);
+  border-color: #C18C5D;
+  box-shadow: 0 0 40px rgba(193, 140, 93, 0.2);
+  transform: translateY(-5px) scale(1.02);
+}
+
+
+/* --- MOBİL UYUMLULUK --- */
+@media (max-width: 968px) {
+  .hero-image-box, .hero-desc-box {
+    width: 100%;
+    margin: 0;
+  }
+  .hero-desc-box {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: -30px;
+    border-radius: 1.5rem;
+    padding: 25px;
+  }
+  .hero-title-inside {
+    font-size: 2.5rem;
+    left: 20px;
+    bottom: 20px;
+  }
+  .manifesto-rect-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 30px 20px;
+  }
+}
+
+/* --- 5. ULTRA-WIDE MODERN FOOTER --- */
+.about-footer {
+  margin-top: 80px;
+  padding: 60px 0 25px 0;
+  background: rgba(20, 15, 10, 0.03);
+  border-top: 1px solid rgba(44, 36, 27, 0.08);
+}
+
+.about-footer-grid {
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+}
+
+.about-footer-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #2C241B;
+  text-transform: uppercase;
+}
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  color: #C18C5D;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.footer-col ul { 
+  list-style: none; 
+  padding: 0; 
+}
+
+.footer-col ul li { 
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  font-size: 0.8rem;
+  color: #2C241B;
+  opacity: 0.6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* İletişim Bilgileri Alanı */
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2C241B;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.footer-bottom {
+  width: 92%;
+  max-width: 1400px;
+  margin: 30px auto 0 auto;
+  border-top: 1px solid rgba(44, 36, 27, 0.05);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(44, 36, 27, 0.35);
+}
+
+/* Mobil Düzen */
+@media (max-width: 968px) {
+  .about-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
