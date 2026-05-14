@@ -93,12 +93,12 @@ const Footer = ({ variant = 'cyber' }) => {
 
   return (
     <>
-      <footer className={`ak-footer footer-${variant}`} style={{ '--theme-color': themeColor, backgroundColor: getFooterBg() }}>
+      <footer className={`dizvyn-footer footer-${variant}`} style={{ '--theme-color': themeColor, backgroundColor: getFooterBg() }}>
         <div className="footer-top-line"></div>
         
         <div className="footer-container footer-compact">
           <div className="footer-brand">
-            <h2 className="footer-logo">
+            <h2 className="footer-logo-dizvyn">
               <img src={logo} alt="Dizvyn" style={{ height: '60px', width: '60px', objectFit: 'cover', borderRadius: '50%', background: '#000', padding: '0', border: '2px solid rgba(0, 243, 255, 0.3)', boxShadow: '0 0 15px rgba(0, 243, 255, 0.15)' }} />
             </h2>
             <p className="footer-description">

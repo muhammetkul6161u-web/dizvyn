@@ -550,7 +550,7 @@
 /* ==========================================================================
    FOOTER READABILITY FIX (FOR LIGHT THEME)
    ========================================================================== */
-.ak-footer.footer-services {
+.dizvyn-footer.footer-services {
   color: #1a1a1a;
 }
 .footer-services .footer-title {
@@ -581,7 +581,7 @@
   background: rgba(0,0,0,0.08);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-.footer-services .footer-logo-kma {
+.footer-services .footer-logo-dizvyn {
   background: linear-gradient(90deg, #0b0b0c, #444) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
