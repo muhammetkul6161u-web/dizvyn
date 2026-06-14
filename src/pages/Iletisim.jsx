@@ -62,8 +62,8 @@ const Iletisim = () => {
   return (
     <div className="iletisim-wrapper">
       <SEO 
-        title="İletişim" 
-        description="Projenizi hayata geçirmek için ilk adımı atın. Dizvyn ile iletişime geçin." 
+        title="İletişim & Teklif Al" 
+        description="Web sitesi yapımı, UI/UX tasarım veya özel yazılım projeniz için Dizvyn ile iletişime geçin ve teklif alın." 
         url="/iletisim" 
       />
       {/* Ambient */}

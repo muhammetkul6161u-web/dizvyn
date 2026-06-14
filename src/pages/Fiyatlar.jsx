@@ -73,8 +73,8 @@ const Fiyatlar = () => {
   return (
     <div className="fiyatlar-wrapper">
       <SEO 
-        title="Fiyatlar & Paketler" 
-        description="Şeffaf fiyatlandırma. Gizli maliyet yok. İşletmenizin dijital dönüşümü için en uygun web tasarım paketini seçin." 
+        title="Web Sitesi Paket Fiyatları" 
+        description="Dizvyn web sitesi yapımı ve web tasarım paket fiyatları. Şeffaf maliyetlerle kurumsal veya bireysel web tasarım hizmeti alın." 
         url="/fiyatlar" 
       />
       {/* Background SVG Chart - Smooth realistic rising & falling */}

@@ -66,7 +66,7 @@ const Home = () => {
     <>
       <SEO 
         title="Ana Sayfa" 
-        description="Sınırları aşan butik bir teknoloji stüdyosu. Modern web ekosistemini minimalist bir estetikle buluşturup markanızın geleceğini inşa ediyoruz." 
+        description="Dizvyn — Web sitesi yapımı, web tasarım, yazılım ve UI/UX tasarım stüdyosu. Modern web ekosistemini minimalist bir estetik ve üst düzey performansla buluşturuyoruz." 
         url="/" 
       />
       <div className="cyber-space-bg">
@@ -127,7 +127,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                Sınırları aşan butik bir teknoloji stüdyosu. Modern web ekosistemini minimalist bir estetikle buluşturup markanızın geleceğini inşa ediyoruz.
+                Dizvyn; modern web site yapımı, web tasarım, yazılım ve UI/UX tasarımı üzerine odaklanan butik bir dijital dizayn stüdyosudur. Küresel vizyonu minimalist bir estetikle buluşturup markanızın dijital geleceğini inşa ediyoruz.
               </motion.p>
               <motion.div 
                 className={`reveal-item ${showContent ? 'visible' : ''}`} 

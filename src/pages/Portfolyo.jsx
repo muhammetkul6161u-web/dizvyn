@@ -173,8 +173,8 @@ const Portfolyo = () => {
   return (
     <div className="portfolyo-wrapper">
       <SEO 
-        title="Portfolyo" 
-        description="Sanat ve kodun kesişimi. Dizvyn'ın web tasarım, yazılım projeleri ve görsel manifestosu." 
+        title="Portfolyo & Projeler" 
+        description="Dizvyn tarafından geliştirilen premium web sitesi yapımı, web tasarım, yazılım projeleri ve UI/UX tasarım portfolyosu." 
         url="/portfolyo" 
       />
       <ParticleBackground variant="lens" />

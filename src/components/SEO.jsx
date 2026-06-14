@@ -11,7 +11,7 @@ const SEO = ({ title, description, name, type = 'website', image, url, schema })
     "@context": "https://schema.org",
     "@type": "WebDesignService",
     "name": "Dizvyn",
-    "alternateName": "Dizvyn Dijital Çözümler",
+    "alternateName": ["Dizvyn", "Dizayn", "Dizvyn Dijital", "Dizvyn Web Tasarım"],
     "image": imageUrl,
     "url": siteUrl,
     "logo": `${siteUrl}/src/assets/logo.webp`,
@@ -19,29 +19,29 @@ const SEO = ({ title, description, name, type = 'website', image, url, schema })
       "https://www.instagram.com/dizvyn",
       "https://www.linkedin.com/company/dizvyn"
     ],
-    "description": "Dizvyn, modern web teknolojileri, UI/UX tasarım ve butik dijital çözümler sunan kreatif bir dijital ajans."
+    "description": "Dizvyn; modern web site yapımı, web tasarım, yazılım ve UI/UX tasarımı üzerine odaklanan butik bir dijital dizayn stüdyosudur."
   };
 
   return (
     <Helmet>
       {/* Standard metadata tags */}
-      <title>{title ? `${title} | Dizvyn` : 'Dizvyn — Butik Web Tasarım ve Dijital Ajans'}</title>
-      <meta name='description' content={description || "Dizvyn, markanızı dijital geleceğe taşıyan butik bir dijital ajanstır. Modern, minimal ve performans odaklı özel yazılım çözümleri."} />
-      <meta name='keywords' content="web tasarım, özel yazılım, kreatif ajans, Dizvyn, dijital dönüşüm, UI/UX tasarım, butik dijital ajans, performanslı web siteleri, React geliştirme" />
+      <title>{title && title !== 'Ana Sayfa' ? `${title} | Dizvyn` : 'Dizvyn | Web Sitesi Yapımı & UI/UX Tasarım'}</title>
+      <meta name='description' content={description || "Dizvyn; web sitesi yapımı, UI/UX tasarım ve butik dijital çözümler sunan kreatif bir stüdyodur. Modern web teknolojileriyle markanızı geleceğe taşıyın."} />
+      <meta name='keywords' content="dizvyn, dizayn, dizvyn web tasarım, web site yapımı, web sitesi yapımı, UI/UX tasarım, arayüz tasarımı, web tasarım, özel yazılım, kreatif ajans, dijital dönüşüm, butik dijital ajans, performanslı web siteleri, React geliştirme" />
       <link rel="canonical" href={fullUrl} />
 
       {/* OpenGraph tags */}
       <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={title && title !== 'Ana Sayfa' ? `${title} | Dizvyn` : 'Dizvyn | Web Sitesi Yapımı & UI/UX Tasarım'} />
+      <meta property="og:description" content={description || "Dizvyn; web sitesi yapımı, UI/UX tasarım ve butik dijital çözümler sunan kreatif bir stüdyodur. Modern web teknolojileriyle markanızı geleceğe taşıyın."} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:image" content={imageUrl} />
 
       {/* Twitter tags */}
       <meta name="twitter:creator" content={name} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={title && title !== 'Ana Sayfa' ? `${title} | Dizvyn` : 'Dizvyn | Web Sitesi Yapımı & UI/UX Tasarım'} />
+      <meta name="twitter:description" content={description || "Dizvyn; web sitesi yapımı, UI/UX tasarım ve butik dijital çözümler sunan kreatif bir stüdyodur. Modern web teknolojileriyle markanızı geleceğe taşıyın."} />
       <meta name="twitter:image" content={imageUrl} />
 
       {/* Schema.org JSON-LD */}

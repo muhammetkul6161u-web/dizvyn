@@ -127,8 +127,8 @@ const Hizmetler = () => {
   return (
     <div className="hizmetler-wrapper">
       <SEO 
-        title="Hizmetlerimiz" 
-        description="Logo tasarımından yapay zeka videolarına, Dizvyn'ın sunduğu tüm profesyonel dijital hizmetler." 
+        title="Hizmetlerimiz (Web Tasarım & UI/UX)" 
+        description="Dizvyn profesyonel dijital hizmetleri: Web sitesi yapımı, logo tasarımı, UI/UX arayüz tasarımı, özel yazılım ve video prodüksiyon çözümleri." 
         url="/hizmetler" 
       />
 

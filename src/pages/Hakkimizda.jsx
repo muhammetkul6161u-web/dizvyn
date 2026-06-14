@@ -17,7 +17,7 @@ const Hakkimizda = () => {
     <div className="hakkimizda-wrapper">
       <SEO 
         title="Hakkımızda" 
-        description="Sıfırdan kodlara. Gerçekçi, şeffaf ve tutkulu. Dizvyn'in hikayesi ve manifestosu." 
+        description="Dizvyn'in hikayesi ve tasarım felsefesi. Web sitesi yapımı ve UI/UX tasarım süreçlerinde şeffaf ve butik dijital çözümler." 
         url="/hakkimizda" 
       />
       <style>
