@@ -281,7 +281,7 @@ const Navbar = () => {
                 }
               }}
             >
-              <div className="logo-circle-inner" style={{ borderColor: theme.color, boxShadow: `0 0 25px ${theme.color}40` }}>
+              <div className="logo-circle-inner">
                 <img src={logo} alt="Dizvyn" className="logo-img" />
               </div>
             </Link>

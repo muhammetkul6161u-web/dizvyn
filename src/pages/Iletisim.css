@@ -360,6 +360,22 @@
   .iletisim-content {
     padding: 0 5% 80px;
   }
+  .iletisim-form-card {
+    min-height: auto;
+  }
+  .iletisim-submit-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .info-hours-detail { font-size: 1.4rem; }
+}
+
+/* Tablet/Phone landscape */
+@media (max-width: 768px) {
+  .iletisim-title { font-size: 3rem; letter-spacing: -2px; }
+  .iletisim-grid { gap: 30px; }
+  .iletisim-form-card { padding: 35px 28px; }
+  .iletisim-glow-red { width: 350px; height: 350px; }
 }
 
 @media (max-width: 640px) {
@@ -402,6 +418,7 @@
   .iletisim-info {
     gap: 35px;
   }
+  .info-hours-detail { font-size: 1.2rem; letter-spacing: -0.5px; }
 }
 
 @media (max-width: 480px) {
@@ -409,4 +426,6 @@
   .iletisim-form-card { padding: 25px 18px; }
   .iletisim-hero { padding-top: 100px !important; min-height: 45vh; }
   .iletisim-content { padding: 0 4% 60px; }
+  .iletisim-form { gap: 22px; }
+  .info-hours-detail { font-size: 1rem; }
 }

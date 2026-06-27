@@ -16,8 +16,8 @@ import toplulukhz1 from '../assets/toplulukhz1.webp';
 import toplulukhz2 from '../assets/toplulukhz2.webp';
 import emrcorehz1 from '../assets/emrcorehz1.webp';
 import emrcorehz2 from '../assets/emrcorehz 2.webp';
-import bluuryhz1 from '../assets/bluuryhz1 .webp';
-import bluuryhz2 from '../assets/bluuryhz2 .webp';
+import blurry3 from '../assets/blurry3.webp';
+import blurry4 from '../assets/blurry4.webp';
 
 // Marquee Assets - Giyim
 import city1hz from '../assets/city1hz.webp';
@@ -26,7 +26,7 @@ import dream1hz from '../assets/dream1hz.webp';
 import dream2hz from '../assets/dream2hz.webp';
 import glicthhz from '../assets/glicthhz.webp';
 
-const webImages = [kafehz1, kafehz2, kamanhz1, kamanhz2, toplulukhz1, toplulukhz2, emrcorehz1, emrcorehz2, bluuryhz1, bluuryhz2];
+const webImages = [kafehz1, kafehz2, kamanhz1, kamanhz2, toplulukhz1, toplulukhz2, emrcorehz1, emrcorehz2, blurry3, blurry4];
 const clothImages = [city1hz, city2hz, dream1hz, dream2hz, glicthhz];
 
 const services = [

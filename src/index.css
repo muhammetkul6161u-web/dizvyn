@@ -58,7 +58,8 @@ a { text-decoration: none; color: inherit; }
    ========================================================================== */
 .text-center { text-align: center; }
 .gradient-text { background: linear-gradient(135deg, #fff 40%, #00f3ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.section-padding { padding: 140px 10%; position: relative; }
+/* Fluid section padding: shrinks from 140px (desktop) → 50px (mobile) automatically */
+.section-padding { padding: clamp(50px, 10vw, 140px) clamp(4%, 8%, 10%); position: relative; }
 .section-border-top { border-top: 1px solid rgba(255, 255, 255, 0.03); }
 
 .reveal-item { 
@@ -138,8 +139,8 @@ a { text-decoration: none; color: inherit; }
 .hero-globe-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
 .hero-content { position: relative; z-index: 10; pointer-events: none; }
 .hero-text-box { max-width: 550px; pointer-events: auto; }
-.hero-title { font-size: 4.5rem; font-weight: 800; letter-spacing: -2px; color: #F5F5F7; line-height: 1.1; margin: 0; transition-delay: 0.2s; }
-.hero-description { color: #A1A1A6; font-size: 1.2rem; margin-top: 30px; margin-bottom: 45px; line-height: 1.8; transition-delay: 0.4s; }
+.hero-title { font-size: clamp(2rem, 5.5vw, 4.5rem); font-weight: 800; letter-spacing: -2px; color: #F5F5F7; line-height: 1.1; margin: 0; transition-delay: 0.2s; }
+.hero-description { color: #A1A1A6; font-size: clamp(0.9rem, 1.5vw, 1.2rem); margin-top: 30px; margin-bottom: 45px; line-height: 1.8; transition-delay: 0.4s; }
 
 @media (max-width: 768px) {
   .hero-title { font-size: 2.8rem; letter-spacing: -1px; }
@@ -205,8 +206,8 @@ a { text-decoration: none; color: inherit; }
 /* ==========================================================================
    6. BÖLÜM: YAKLAŞIMIMIZ (BENTO GRID)
    ========================================================================== */
-.section-subtitle { color: #00f3ff; font-size: 0.8rem; letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; }
-.section-title { font-size: 3.5rem; font-weight: 800; margin: 0; letter-spacing: -1px; }
+.section-subtitle { color: #00f3ff; font-size: clamp(0.65rem, 1vw, 0.8rem); letter-spacing: 3px; font-weight: bold; margin-bottom: 15px; }
+.section-title { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; margin: 0; letter-spacing: -1px; }
 
 .grid-bento { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(200px, auto); gap: 24px; }
 .bento-span-2 { grid-column: span 2; }
@@ -255,9 +256,9 @@ a { text-decoration: none; color: inherit; }
   background: var(--scroll-bg, rgba(3, 4, 7, 0.92));
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border-bottom: 1px solid var(--scroll-border, rgba(0, 243, 255, 0.15));
+  border-bottom: 1px solid var(--scroll-border, rgba(0, 243, 255, 0.2));
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  overflow: visible; /* Allow logo to stick out */
+  overflow: visible;
 }
 
 .navbar-content-wrapper {
@@ -295,42 +296,60 @@ a { text-decoration: none; color: inherit; }
 
 .logo-circle-container {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 154px;
+  height: 154px;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
 
 .navbar-scrolled .logo-circle-container {
-  width: 85px;
-  height: 85px;
-  transform: translateY(12px);
+  width: 126px;
+  height: 126px;
+  transform: translateY(0px);
 }
 
 .logo-circle-inner {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background: #000000;
-  border: 2px solid var(--theme-color, #00f3ff);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.3));
+  border-radius: 50%;
+  padding: 4px;
 }
 
-/* No hover movement on logo */
+/* When navbar scrolled: logo gets the same glass effect as navbar */
+.navbar-scrolled .logo-circle-inner {
+  background: var(--scroll-bg, rgba(3, 4, 7, 0.85));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--scroll-border, rgba(0, 243, 255, 0.3));
+  box-shadow:
+    0 0 20px var(--scroll-border, rgba(0, 243, 255, 0.15)),
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  filter: drop-shadow(0 0 18px var(--scroll-border, rgba(0, 243, 255, 0.2)));
+}
+
+/* Hover on logo */
 .logo-circle-container:hover .logo-circle-inner {
-  border-color: var(--theme-color);
-  box-shadow: 0 0 30px var(--theme-color, rgba(0, 243, 255, 0.3));
+  filter: drop-shadow(0 0 28px var(--theme-color, rgba(0, 243, 255, 0.5)));
+  transform: scale(1.05);
+}
+
+.navbar-scrolled .logo-circle-container:hover .logo-circle-inner {
+  box-shadow:
+    0 0 30px var(--scroll-border, rgba(0, 243, 255, 0.35)),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+  transform: scale(1.06);
 }
 
 .logo-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Nav Item & Hover Effects */
@@ -532,8 +551,8 @@ a { text-decoration: none; color: inherit; }
   .mobile-only { display: flex !important; }
   .nav-center-logo { position: relative; left: auto; top: auto; transform: none; }
   .navbar-content-wrapper { justify-content: space-between; }
-  .logo-circle-container { width: 60px; height: 60px; }
-  .navbar-scrolled .logo-circle-container { width: 50px; height: 50px; }
+  .logo-circle-container { width: 65px; height: 65px; }
+  .navbar-scrolled .logo-circle-container { width: 55px; height: 55px; }
   .premium-navbar { height: 75px; }
   .premium-navbar.navbar-hidden-mobile {
     transform: translateY(-100%);
@@ -590,12 +609,10 @@ a { text-decoration: none; color: inherit; }
 
 .mobile-menu-logo img {
   height: 55px;
-  width: 55px;
-  object-fit: cover;
-  border-radius: 50%;
-  background: #000000;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
   padding: 0;
-  border: 2px solid var(--theme-color, rgba(0, 243, 255, 0.3));
   filter: drop-shadow(0 0 10px var(--theme-color, rgba(0, 243, 255, 0.3)));
 }
 
@@ -669,21 +686,15 @@ a { text-decoration: none; color: inherit; }
 
 .mobile-menu-link:hover, .mobile-link-active {
   background: rgba(255, 255, 255, 0.05);
-  border-color: var(--link-color, #fff);
+  border-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
 .mobile-menu-link:hover .mobile-menu-icon, .mobile-link-active .mobile-menu-icon {
-  background: var(--link-color, #fff);
-  border-color: var(--link-color, #fff);
-  box-shadow: 0 0 20px var(--link-color, rgba(255, 255, 255, 0.3));
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-.mobile-menu-link:hover .mobile-menu-icon svg *, .mobile-link-active .mobile-menu-icon svg * {
-  stroke: #000 !important;
-  fill: #000 !important;
-  opacity: 1 !important;
-}
 
 .mobile-menu-link:hover {
   color: var(--link-color, #fff);
@@ -1454,8 +1465,8 @@ html.translated-ltr body, html.translated-rtl body { top: 0 !important; }
   .mobile-only { display: flex !important; }
   .nav-center-logo { position: relative; left: auto; top: auto; transform: none; }
   .navbar-content-wrapper { justify-content: space-between; }
-  .logo-circle-container { width: 60px; height: 60px; }
-  .navbar-scrolled .logo-circle-container { width: 50px; height: 50px; transform: translateY(8px); }
+  .logo-circle-container { width: 85px; height: 85px; }
+  .navbar-scrolled .logo-circle-container { width: 72px; height: 72px; }
   .premium-navbar { height: 75px; padding: 0 15px; }
   .hamburger-btn { display: flex; }
 

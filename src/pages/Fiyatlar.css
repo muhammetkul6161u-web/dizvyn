@@ -51,16 +51,19 @@
 .price-ticker-panel {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px 20px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 255, 157, 0.15);
   border-radius: 12px;
-  padding: 15px 30px;
+  padding: 15px 20px;
   margin-bottom: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   z-index: 20;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .ticker-item {
@@ -356,6 +359,7 @@
   max-width: 800px;
   margin: 60px auto 0;
   text-align: center;
+  padding: 0 5%;
 }
 
 .pricing-warning {
@@ -470,5 +474,9 @@
   .fiyatlar-title { font-size: 1.8rem; }
   .pricing-card { padding: 25px 15px; }
   .pkg-price { font-size: 1.6rem; }
+  .pkg-title { font-size: 1.3rem; }
   .fiyatlar-content { padding: 20px 4% 60px; }
+  .price-ticker-panel { padding: 10px 12px; gap: 8px; }
+  .ticker-item { font-size: 0.75rem; }
+  .pricing-footer { margin-top: 30px; }
 }

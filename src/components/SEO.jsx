@@ -11,7 +11,7 @@ const SEO = ({ title, description, name, type = 'website', image, url, schema })
     "@context": "https://schema.org",
     "@type": "WebDesignService",
     "name": "Dizvyn",
-    "alternateName": ["Dizvyn", "Dizayn", "Dizvyn Dijital", "Dizvyn Web Tasarım"],
+    "alternateName": ["Dizvyn", "Dizayn", "Dizvayn", "Dizvin", "Dizayn Web", "Dizayn Ajans", "Dizvyn Dijital", "Dizvyn Web Tasarım"],
     "image": imageUrl,
     "url": siteUrl,
     "logo": `${siteUrl}/src/assets/logo.webp`,
@@ -27,7 +27,7 @@ const SEO = ({ title, description, name, type = 'website', image, url, schema })
       {/* Standard metadata tags */}
       <title>{title && title !== 'Ana Sayfa' ? `${title} | Dizvyn` : 'Dizvyn | Web Sitesi Yapımı & UI/UX Tasarım'}</title>
       <meta name='description' content={description || "Dizvyn; web sitesi yapımı, UI/UX tasarım ve butik dijital çözümler sunan kreatif bir stüdyodur. Modern web teknolojileriyle markanızı geleceğe taşıyın."} />
-      <meta name='keywords' content="dizvyn, dizayn, dizvyn web tasarım, web site yapımı, web sitesi yapımı, UI/UX tasarım, arayüz tasarımı, web tasarım, özel yazılım, kreatif ajans, dijital dönüşüm, butik dijital ajans, performanslı web siteleri, React geliştirme" />
+      <meta name='keywords' content="dizvyn, dizayn, dizvayn, dizvin, dizayn web, dizayn ajans, dizvyn web tasarım, web site yapımı, web sitesi yapımı, UI/UX tasarım, arayüz tasarımı, web tasarım, özel yazılım, kreatif ajans, dijital dönüşüm, butik dijital ajans, performanslı web siteleri, React geliştirme" />
       <link rel="canonical" href={fullUrl} />
 
       {/* OpenGraph tags */}

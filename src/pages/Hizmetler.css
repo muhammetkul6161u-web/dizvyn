@@ -446,6 +446,10 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
   }
+  .hizmetler-hero {
+    padding: 0 6% 60px;
+  }
+  .hizmet-card-title { font-size: 1.6rem; }
   .marquee-card {
     width: 300px;
     height: 300px;
@@ -453,6 +457,8 @@
   .marquee-container {
     height: 400px;
   }
+  .hizmetler-glow-white { width: 400px; height: 400px; }
+  .hizmetler-glow-silver { width: 500px; height: 500px; }
 }
 
 @media (max-width: 768px) {

@@ -7,8 +7,8 @@ import Footer from '../components/Footer';
 import './Portfolyo.css';
 
 // Fallback images
-import bluury1 from '../assets/bluury1.webp';
-import bluury2 from '../assets/bluury2.webp';
+import blurry1 from '../assets/blurry1.webp';
+import blurry2 from '../assets/blurry2.webp';
 import emr1 from '../assets/emr1.webp';
 import emr2 from '../assets/emr2.webp';
 import kafe1 from '../assets/kafe1.webp';
@@ -21,11 +21,12 @@ import topluluk2 from '../assets/topluluk2.webp';
 const staticProjects = [
   {
     id: 1,
-    title: 'Bluury',
-    subtitle: 'Fotoğraf & Video Çekim Ajansı',
+    title: 'Blurry Ajans',
+    subtitle: 'YENİ YAYINDA | Fotoğraf & Video Çekim Ajansı',
     desc: 'Profesyonel Düğün, Reklam ve Sanatsal Çekim Odaklı Post-Prodüksiyon Çözümleri.',
     techs: ['React', 'Framer Motion', 'UI/UX Design'],
-    images: [bluury1, bluury2],
+    link: 'https://www.blurryajans.com',
+    images: [blurry1, blurry2],
     color: '#BC13FE',
   },
   {

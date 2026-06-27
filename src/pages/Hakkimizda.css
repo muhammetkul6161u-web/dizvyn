@@ -372,6 +372,16 @@
   .manifesto-rect-card {
     padding: 22px 16px;
   }
+  .story-content {
+    padding: 20px;
+  }
+  .story-card-wrapper {
+    min-height: 280px;
+  }
+  .manifesto-section,
+  .story-section {
+    margin-top: 50px;
+  }
 }
 
 /* --- 5. ULTRA-WIDE MODERN FOOTER --- */

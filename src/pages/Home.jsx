@@ -16,6 +16,9 @@ import emr2 from '../assets/emr2.webp';
 
 import kaman1 from '../assets/kaman1.webp';
 import kaman2 from '../assets/kaman2.webp';
+
+import blurry1 from '../assets/blurry1.webp';
+import blurry2 from '../assets/blurry2.webp';
 import ParticleBackground from '../components/ParticleBackground';
 
 const Home = () => {
@@ -109,7 +112,7 @@ const Home = () => {
 
             {/* Center Content */}
             <div className="hero-content hero-content-center">
-              <div className={`reveal-item ${showContent ? 'visible' : ''}`} style={{ marginBottom: '30px' }}>
+              <div className={`reveal-item ${showContent ? 'visible' : ''}`} style={{ marginBottom: '20px' }}>
                 <LiveFeed />
               </div>
               <motion.h1 
@@ -244,34 +247,57 @@ const Home = () => {
             </div>
 
             <div className="projects-container">
-              {/* EMR CORE PROJESİ */}
+              {/* BLURRY AJANS PROJESİ */}
               <div className="reveal-item project-row">
+                <a href="https://www.blurryajans.com" target="_blank" rel="noopener noreferrer" className="project-borderless project-borderless-xl">
+                  <div className="mockup-group asymmetric-group">
+                    <SmartImage src={blurry2} alt="Blurry 2" className="mockup-img secondary-img" objectFit="contain" />
+                    <SmartImage src={blurry1} alt="Blurry 1" className="mockup-img primary-img" objectFit="contain" />
+                  </div>
+                </a>
+                <div className="project-info">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    style={{ display: 'inline-block', padding: '6px 14px', background: 'rgba(188, 19, 254, 0.1)', border: '1px solid rgba(188, 19, 254, 0.4)', borderRadius: '20px', color: '#BC13FE', fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '20px', letterSpacing: '1px' }}
+                  >
+                    🚀 YENİ YÜZÜMÜZLE HİZMETTEYİZ
+                  </motion.div>
+                  <motion.h3 className="project-title text-xl gradient-text-home" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>Blurry Ajans</motion.h3>
+                  <p className="project-desc text-lg">Fotoğraf & Video Çekim Ajansı</p>
+                  <a href="https://www.blurryajans.com" target="_blank" rel="noopener noreferrer" className="project-link">CANLI SİTEYE GİT ↗</a>
+                </div>
+              </div>
+
+              {/* EMR CORE PROJESİ */}
+              <div className="reveal-item project-row project-row-reverse">
+                <div className="project-info">
+                  <motion.h3 className="project-title text-xl gradient-text-home" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>EMR CORE</motion.h3>
+                  <p className="project-desc text-lg">Modern Adisyon Sistemleri</p>
+                  <a href="https://www.emrcore.com.tr" target="_blank" rel="noopener noreferrer" className="project-link">CANLI SİTEYE GİT ↗</a>
+                </div>
                 <a href="https://www.emrcore.com.tr" target="_blank" rel="noopener noreferrer" className="project-borderless project-borderless-xl">
                   <div className="mockup-group asymmetric-group">
                     <SmartImage src={emr2} alt="EMR 2" className="mockup-img secondary-img" objectFit="contain" />
                     <SmartImage src={emr1} alt="EMR 1" className="mockup-img primary-img" objectFit="contain" />
                   </div>
                 </a>
-                <div className="project-info">
-                  <motion.h3 className="project-title text-xl gradient-text-home" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>EMR CORE</motion.h3>
-                  <p className="project-desc text-lg">Modern Adisyon Sistemleri</p>
-                  <a href="https://www.emrcore.com.tr" target="_blank" rel="noopener noreferrer" className="project-link">CANLI SİTEYE GİT ↗</a>
-                </div>
               </div>
 
-{/* KAMAN TAKSİ PROJESİ */}
-              <div className="reveal-item project-row project-row-reverse">
-                <div className="project-info">
-                  <motion.h3 className="project-title text-xl gradient-text-home" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>Kaman Taksi</motion.h3>
-                  <p className="project-desc text-lg">Bölgesel Ulaşım Çözümü</p>
-                  <a href="https://kamantaksi.com" target="_blank" rel="noopener noreferrer" className="project-link">SİTEYE GİT ↗</a>
-                </div>
+              {/* KAMAN TAKSİ PROJESİ */}
+              <div className="reveal-item project-row">
                 <a href="https://kamantaksi.com" target="_blank" rel="noopener noreferrer" className="project-borderless project-borderless-xl">
                   <div className="mockup-group asymmetric-group">
                     <SmartImage src={kaman2} alt="Kaman 2" className="mockup-img secondary-img" objectFit="contain" />
                     <SmartImage src={kaman1} alt="Kaman 1" className="mockup-img primary-img" objectFit="contain" />
                   </div>
                 </a>
+                <div className="project-info">
+                  <motion.h3 className="project-title text-xl gradient-text-home" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>Kaman Taksi</motion.h3>
+                  <p className="project-desc text-lg">Bölgesel Ulaşım Çözümü</p>
+                  <a href="https://kamantaksi.com" target="_blank" rel="noopener noreferrer" className="project-link">SİTEYE GİT ↗</a>
+                </div>
               </div>
               
             </div> {/* projects-container KAPANIŞI */}
